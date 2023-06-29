@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=HighTide:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Antonio:wght@100;200;300;400;500;600;700&display=swap');
+body {
+  font-family: Antonio;
+  /* height: 100%; */
+}
+.App {
+  text-align: center;
+  background-color: #FAFAFA;
+  /* min-height: 100%; */
+}
+.app {
+  min-height: 100vh;
+  background-color: #f0f0f0;
+  opacity: 0;
+  animation: app 0.5s ease-in both;
+  animation-delay: 0.5s;
+}
+.title {
+  font-size: 1.75rem;
+  width: 75%;
+}
+
+.selected {
+  border: 0.1rem solid #7d7d7d !important;
+    outline: 0.1rem solid #7d7d7d !important;
+    outline-offset: 0.25rem;
+    transform: translateY(-0.25rem) scale(1.1);
+    transition: all 0.5s ease-in-out;
+    /* margin: 0.5rem 0 0 0; */
+}
+
+.header {
+  opacity: 0;
+  animation: header 0.5s ease-in both;
+  animation-delay: 0.5s;
+  font-family: Antonio;
+  color: #000;
+  font-size: 20px;
+  font-weight: bold;
+}
+.nav-link {
+  color: #000 !important; 
+  font-size: 25px;
+}
+
+
+.accordion-0 {
+  /* opacity: 0; */
+  animation: slide-in 1s ease-in both;
+  animation-delay: 1s;
+}
+
+.accordion-1 {
+  /* opacity: 0; */
+  animation: slide-in 1.5s ease-in both;
+  animation-delay: 1.5s;
+}
+
+.accordion-2 {
+  /* opacity: 0; */
+  animation: slide-in 2s ease-in both;
+  animation-delay: 2s;
+}
+
+.acc-head button {
+  font-size: 22px;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 22px 40px 22px 40px;
+
+}
+
+.acc-head button::after{
+  font-weight: bolder;
+}
+
+.accordion-body {
+  padding: 30px !important;
+}
+
+.add-to-cart {
+  opacity: 0;
+  animation: add-to-cart 1s ease-in both;
+  animation-delay: 3.5s;
+  padding: 20px 40px 20px 40px;
+  font-size: 24px;
+  font-weight: 600;
+  border: none;
+  background-color: #FFFFFF;
+  text-transform: uppercase;
+}
+.add-to-cart:hover {
+  border: 2px solid #7d7d7d
+}
+
+.seat:hover {
+  opacity: 1;
+  animation: seat-animation 1s ease-in both;
+  animation-delay: 1s;
+}
+
+.seat {
+  background: #fff;
+  width: 5rem !important;
+  height: 5rem !important;
+  transition: all 0.5s ease-in-out;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+  margin: 10px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  cursor: pointer;
+}
+.seat img {
+  cursor: pointer;
+  /* margin: 20px; */
+}
+
+
+@keyframes app {
+  0% {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateX(0);
+  }
+}
+
+@keyframes accordion-0 {
+  0% {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateX(0);
+  }
+}
+
+@keyframes accordion-1 {
+  0% {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateX(0);
+  }
+}
+
+@keyframes accordion-2 {
+  0% {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateX(0);
+  }
+}
+
+@keyframes add-to-cart {
+  from {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0%);
+  }
+}
+
+@keyframes header {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -20%, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes seat-animation {
+  from {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    opacity: 0;
+    transform: translate3d(0, -20%, 0);
+  }
+  
+}
+/* end header */
+
+@keyframes slide-in {
+    from {
+      opacity: 0;
+      transform: translateX(100%);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0%);
+    }
+  }
+
+.topnav {
+  height: 100%x;
+  background: url("./assets/Mask.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+}
+
+.active .selected {
+  border: 0.1rem solid #7d7d7d !important;
+  outline: 0.1rem solid #7d7d7d !important;
+  outline-offset: 0.25rem;
+  transform: translateY(-0.25rem) scale(1.1);
+  transition: all 0.5s ease-in-out;
+  margin: 0.5rem 0 0 0;
+}
